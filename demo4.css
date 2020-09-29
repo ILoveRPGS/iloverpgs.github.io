@@ -5,10 +5,77 @@ h1 {
 html,body{
     height:100%;
     margin:0;
+    padding: 0;
+    font-family:"Trebuchet MS", Verdana, sans-serif;
+    font-size:1.1em
 }
+header{
+    background-color: #ffffff;
+    width: 100%;
+    text-align:center;
+    height:60px;
+}
+
+#paikkakartta{
+    width:45%;
+    float:left;
+}
+#hintataulukko{
+    width:45%;
+    float:left;
+}
+#hintaalue{
+    display:flex;
+    justify-content:center;
+}
+
+ul.navi {
+    width: fit-content;
+    list-style-type: none;
+    margin: 0 auto;
+    padding: 0;
+    overflow: hidden;
+    background-color: #ffffff;
+    height:60px;
+  }
+  
+  li.navi {
+    float: left;
+  }
+  
+  li.navi a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 20px 25px;
+    text-decoration: none;
+  }
+  
+  img.round{
+      border-radius:50%;
+
+  }
+  #kuvat{
+      width:100%;
+      display:flex;
+      justify-content:center;
+  }
+
+
+  a:hover:not(.active) {
+    background-color: #cccccc;
+  }
+  
+  .active {
+    background-color:#999999;
+  }
+
 section{
     height:100vh;
-    margin:0;
+    padding-top:30px;
+    padding-left:60px;
+    padding-right:60px;
+    padding-bottom:20px;
 }
 
 

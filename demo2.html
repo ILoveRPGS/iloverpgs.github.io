@@ -10,15 +10,15 @@
 <body>
 
     <button onclick="topFunction()" id="top" title="Go to top">Top</button>
-
-    <ul>
-        <li><a href="#kalatori">Kalatori</a></li>
-        <li><a href="#markkinat">Markkinat</a></li>
-        <li><a href="#hinnasto">Hinnasto</a></li>
-        <li><a href="#otayhteytta">Ota Yhteyttä</a></li>
-        <li><a href="#sijainti">Sijainti</a></li>
+    <header>
+    <ul class="navi">
+        <li class="navi"><a href="#kalatori">Kalatori</a></li>
+        <li class="navi"><a href="#markkinat">Markkinat</a></li>
+        <li class="navi"><a href="#hinnasto">Hinnasto</a></li>
+        <li class="navi"><a href="#otayhteytta">Ota Yhteyttä</a></li>
+        <li class="navi"><a href="#sijainti">Sijainti</a></li>
     </ul>
-
+</header>
 
 <section id="kalatori">
     <a name ="kalatori"><h1>Kalatori</h1></a>
@@ -40,101 +40,110 @@
         <li>Syysmarkkinat tiistai 13.10. klo 7–15</li>
         <li>Joulumarkkinat tiistai 15.12. klo 7–15</li>
     </ul>
-    <img src="./Kuvat/mustekala.jpg" alt="mustekala">
-    <img src="./Kuvat/pienikala.jpg" alt="pienikala">
-    <img src="./Kuvat/rapu.jpg" alt="rapu">
+
+    <div id="kuvat">
+    <img src="./Kuvat/mustekala.jpg" alt="mustekala" class="round">
+    <img src="./Kuvat/pienikala.jpg" alt="pienikala" class="round">
+    <img src="./Kuvat/rapu.jpg" alt="rapu" class="round">
+</div>
     </section>
 
     <section id="hinnasto">
-    <a name ="hinnasto"><h3>Hinnasto</h3></a>
-    
-    <p>
-        <img src="./kuvat/tori.png" alt="tori"><br>
-        Paikkakartta
-    </p>
+        <a name ="hinnasto"><h3>Hinnasto</h3></a>
+        <div id="hintaalue">
+            
+            <div id="paikkakartta">
+            <p>
+                <img src="./kuvat/tori.png" alt="tori"><br>
+                Paikkakartta
+            </p>
+            </div>
 
-    <table>
-        <tr> <!-- otsikkorivi -->
-            <th>Tunnus</th> <!-- table head = th -->
-            <th>Ala m&sup2;</th> 
-            <th>Hinta &euro;</th> 
-        </tr>
-        <tr>
-            <td>A1</td><!-- table data = td -->
-            <td>15</td>
-            <td>60</td>
-        </tr>
-        <tr>
-            <td>A2</td><!-- table data = td -->
-            <td>15</td>
-            <td>60</td>
-        </tr>
-        <tr>
-            <td>A3</td><!-- table data = td -->
-            <td>15</td>
-            <td>60</td>
-        </tr>
-        <tr>
-            <td>A4</td><!-- table data = td -->
-            <td>15</td>
-            <td>60</td>
-        </tr>
-        <tr>
-            <td>B1</td><!-- table data = td -->
-            <td>8</td>
-            <td>40</td>
-        </tr>
-        <tr>
-            <td>B1</td><!-- table data = td -->
-            <td>8</td>
-            <td>40</td>
-        </tr>
-        <tr>
-            <td>B2</td><!-- table data = td -->
-            <td>8</td>
-            <td>40</td>
-        </tr>
-        <tr>
-            <td>B3</td><!-- table data = td -->
-            <td>8</td>
-            <td>40</td>
-        </tr>
-        <tr>
-            <td>B4</td><!-- table data = td -->
-            <td>8</td>
-            <td>40</td>
-        </tr>
-        <tr>
-            <td>B5</td><!-- table data = td -->
-            <td>8</td>
-            <td>40</td>
-        </tr>
-        <tr>
-            <td>B6</td><!-- table data = td -->
-            <td>8</td>
-            <td>40</td>
-        </tr>
-        <tr>
-            <td>B7</td><!-- table data = td -->
-            <td>8</td>
-            <td>40</td>
-        </tr>
-        <tr>
-            <td>B8</td><!-- table data = td -->
-            <td>8</td>
-            <td>40</td>
-        </tr>
-        <tr>
-            <td>B9</td><!-- table data = td -->
-            <td>8</td>
-            <td>40</td>
-        </tr>
-        <tr>
-            <td>B10</td><!-- table data = td -->
-            <td>8</td>
-            <td>40</td>
-        </tr>
-    </table>
+            <div id="hintataulukko">
+            <table>
+                <tr> <!-- otsikkorivi -->
+                    <th>Tunnus</th> <!-- table head = th -->
+                    <th>Ala m&sup2;</th> 
+                    <th>Hinta &euro;</th> 
+                </tr>
+                <tr>
+                    <td>A1</td><!-- table data = td -->
+                    <td>15</td>
+                    <td>60</td>
+                </tr>
+                <tr>
+                    <td>A2</td><!-- table data = td -->
+                    <td>15</td>
+                    <td>60</td>
+                </tr>
+                <tr>
+                    <td>A3</td><!-- table data = td -->
+                    <td>15</td>
+                    <td>60</td>
+                </tr>
+                <tr>
+                    <td>A4</td><!-- table data = td -->
+                    <td>15</td>
+                    <td>60</td>
+                </tr>
+                <tr>
+                    <td>B1</td><!-- table data = td -->
+                    <td>8</td>
+                    <td>40</td>
+                </tr>
+                <tr>
+                    <td>B1</td><!-- table data = td -->
+                    <td>8</td>
+                    <td>40</td>
+                </tr>
+                <tr>
+                    <td>B2</td><!-- table data = td -->
+                    <td>8</td>
+                    <td>40</td>
+                </tr>
+                <tr>
+                    <td>B3</td><!-- table data = td -->
+                    <td>8</td>
+                    <td>40</td>
+                </tr>
+                <tr>
+                    <td>B4</td><!-- table data = td -->
+                    <td>8</td>
+                    <td>40</td>
+                </tr>
+                <tr>
+                    <td>B5</td><!-- table data = td -->
+                    <td>8</td>
+                    <td>40</td>
+                </tr>
+                <tr>
+                    <td>B6</td><!-- table data = td -->
+                    <td>8</td>
+                    <td>40</td>
+                </tr>
+                <tr>
+                    <td>B7</td><!-- table data = td -->
+                    <td>8</td>
+                    <td>40</td>
+                </tr>
+                <tr>
+                    <td>B8</td><!-- table data = td -->
+                    <td>8</td>
+                    <td>40</td>
+                </tr>
+                <tr>
+                    <td>B9</td><!-- table data = td -->
+                    <td>8</td>
+                    <td>40</td>
+                </tr>
+                <tr>
+                    <td>B10</td><!-- table data = td -->
+                    <td>8</td>
+                    <td>40</td>
+                </tr>
+            </table>
+        </div>
+    </div>
 </section>
 <section id="yhteys">
     <a name ="otayhteytta"></a><h3>Ota Yhteyttä</h3>

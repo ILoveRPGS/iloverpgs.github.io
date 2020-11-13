@@ -7,7 +7,7 @@
  div.container{
     display: grid;
     width: 100%;
-    height: 100%;
+    height: 400px;
     grid-template-columns: 10rem auto 8rem[right];
     grid-template-rows: 10rem 5rem auto 5rem;
     grid-template-areas: 
@@ -38,7 +38,6 @@ nav{
 article{
     background: rgb(0,0,0,0.2);
     grid-area: Article;
-    margin: 10px;
 }
 #kuva{
     display: flex;
@@ -47,3 +46,16 @@ article{
     height: 194px;
     width: 259px;
 }
+@media screen and (max-width: 50rem){
+    article{
+        grid-column-end: left;
+        display: none;
+    }
+    .rightpanel{
+        grid-column-start: right;
+        display: none;
+    }
+    main{
+        grid-column-start: left;
+        grid-column-end: right;
+    }

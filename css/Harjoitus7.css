@@ -94,8 +94,8 @@ body{
     display: none;
     position: relative;
     background-color:#3A405A;
-    width: 500px;
-    height: 250px;
+    width: 700px;
+    height: 275px;
     left: 0;
     z-index: 1;
     float:left;
@@ -109,20 +109,19 @@ body{
     display: block;
   }
   .firstcolumn {
-    position: relative;
     float: left;
-    width: 150px;
+    width: 350px;
     background-color: #3A405A;
-    height: 75px;
+    height: 275px;
+    text-align: left;
   }
   .secondcolumn {
-    position: relative;
     float: right;
-    width: 150px;
-    padding: 10px;
-    padding-right: 50px;
+    width: 350px;
     background-color: #3A405A;
-    height: 75px;
+    height: 275px;
+    text-align: left;
+    margin-bottom: -500px;
   }
   
   .firstcolumn a,.secondcolumn a {
@@ -130,12 +129,51 @@ body{
     color:#F9DEC9;
     text-decoration: none;
     display: block;
-    text-align: center;
-    padding-left: 35px;
+    text-align: left;
     margin-top: 5px;
+    height: 25px;
+    background-color: #3A405A;
+    font-size: 18px;
 }
+.firstcolumn a,.firstcolumn p{
+  margin-left: 40px;
+}
+#palvelutjatutkimus{
+  font-size: 32px;
+  position: relative;
+  float: right;
+  width: 600px;
+  height: 100px;
+  color: white;
+  left:100%;
+  bottom: 75px;
   
-  .firstcolumn a:hover {
-    background-color: #ddd;
   }
-  
+  #colm1{
+    width:300px;
+    float: left;
+    text-align: center;
+  }
+  #colm2{
+    width:300px;
+    float:right;
+    text-align: left;
+  }
+  #palikka1,#palikka2,#palikka3{
+    width: 400px;
+    height: 600px;
+    display: flex;
+    margin: 100px;
+  }
+  #palikka1{
+    float: left;
+    border:1px solid black;
+  }
+  #palikka2{
+    margin-right: 200px;
+    float: left;
+    border:1px solid black;
+  }
+  #palikka3{ 
+    border:1px solid black;
+  }

@@ -159,21 +159,171 @@ body{
     float:right;
     text-align: left;
   }
-  #palikka1,#palikka2,#palikka3{
-    width: 400px;
-    height: 600px;
+
+  #justifybitch{
+    justify-content: space-around;
     display: flex;
-    margin: 100px;
+    text-align: center;
   }
-  #palikka1{
-    float: left;
-    border:1px solid black;
+  #palikka1,#palikka2,#palikka3{
+    
+    width: 450px;
+    height: 650px;
+    margin-top: 100px;
+    border-radius: 10px;
+    font-size: 20px;
+    box-shadow: 0px 0px 8px grey;
   }
-  #palikka2{
-    margin-right: 200px;
-    float: left;
-    border:1px solid black;
+  #divphotos{
+    background-image: url("../Kuvat/bookman.jpeg");
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 260px;
+    background-size: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
   }
-  #palikka3{ 
-    border:1px solid black;
+  #divphotos1{
+    background-image: url("../Kuvat/womancomp.jpg");
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 260px;
+    background-size: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
   }
+  #divphotos2{
+    background-image: url("../Kuvat/writingbook.jpeg");
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 240px;
+    background-size: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+
+  .hkolmoset{
+    font-size:30px;
+    color:#3A405A;
+    margin-top: 50px;
+    border: 0px;
+    text-align: center;
+  }
+  .haejalue{
+    margin-top: 0px;
+    width: 350px;
+    height:50px;
+    border-radius: 5px;
+    border: 1px solid #3A405A;
+    text-align: center;
+    background-color: white;
+  }
+  .haejalue:hover a{
+    color: white;
+    text-decoration: underline white;
+  }
+  .haejalue:hover{
+    background-color: #3A405A;
+  }
+  
+  .kaikkipeet{
+    margin-top: -20px;
+    margin-left: 30px;
+    margin-right: 30px;
+    font-size: 18px;
+
+  }
+  .divlinkit{
+    text-decoration: none;
+    color: #3A405A;
+    font-size: 18px;
+  }
+  #palikka2 .kaikkipeet{
+    margin-top: 45px;
+  }
+  .divphotos3{
+    background-image: url("../Kuvat/manwrites.jpeg");
+    background-repeat: no-repeat;
+    width: 100%;
+    width: 600px;
+    height: 450px;
+    background-size: 100%;
+    margin-top: 175px;
+    margin-right: 50px;
+  }
+  .tekstiboksi2{
+    height: 450px;
+    width:1000px;
+    margin-top: 125px;
+    font-size: 42px;
+    text-align: left;
+    color: #3A405A;
+  }
+  #justifybitch1{
+    justify-content:  center;
+    display: flex;
+    text-align: center;
+    }
+    .sitatekstia{
+      font-size: 18px;
+      margin-top: -25px;
+    }
+    .kuvalinkit{
+      text-decoration: none;
+      font-size: 22px;
+    }
+    #footer{
+      height: 55vh;
+      width: 100%;
+      background-color: #3A405A;
+      padding-top:50px ;
+    }
+    #lisaalinkkejafootteri{
+      display: flex;
+      justify-content: space-evenly;
+      height: 200px;
+      width: 75%;
+      margin-top: 50px;
+      margin-left: auto;
+      margin-right: auto;
+      color: #F9DEC9;
+      font-size: 2vh;
+    }
+    #Yhteystiedot{ 
+      color: white;
+      margin: 0 auto;
+      width: 70vh;
+      height: 10vh;
+      text-align: center;
+      padding-top: 10px;
+    }
+    #Linkkiiconit{
+      justify-content: space-evenly;
+      display: flex;
+      font-size: 5vh;
+      height: 15vh;
+      width: 70vh;
+      margin-right: 50vh;
+      margin-left: 50vh;
+      text-align: center;
+      color:#F9DEC9;
+    }
+    #copyrightfootteri{
+      font-size: 1.5vh;
+    }
+    #Yhteystiedot a:link{
+      text-decoration: none;
+      color: #F9DEC9;
+    }
+    #Yhteystiedot a:visited{
+      text-decoration: none;
+      color: #F9DEC9;
+    }
+    #Yhteystiedot a:hover{
+      text-decoration: none;
+      color: #F9DEC9;
+    }
+    #Yhteystiedot a:active{
+      text-decoration: none;
+      color: #F9DEC9;
+    }

@@ -86,6 +86,15 @@ body{
     padding: 20px 25px;
     text-decoration: none;
   }
+  .aa {
+    float: left;
+    font-size: 20px;
+    color: #F9DEC9;
+    text-align: right;
+    padding-top: 19px;
+    padding-left: 5px;
+    text-decoration: none;
+  }
   .navbar a:hover, .dropdown:hover .dropbtn {
     background-color:#3A405A;
   }
@@ -145,8 +154,8 @@ body{
   width: 600px;
   height: 100px;
   color: white;
-  left:100%;
-  bottom: 75px;
+  left: 45vw;
+  bottom: 5vw;
   
   }
   #colm1{
@@ -326,4 +335,15 @@ body{
     #Yhteystiedot a:active{
       text-decoration: none;
       color: #F9DEC9;
+    }
+    @media screen and (max-width: 50rem){
+      #palvelutjatutkimus{
+        display: none;
+      }
+      #tekstiboksi1teksti{
+        display: none;
+      }
+      #yhteystiedot{
+        display: none;
+      }
     }

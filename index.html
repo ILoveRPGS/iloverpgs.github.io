@@ -1,65 +1,11 @@
 <!DOCTYPE html>
-<html>
-    <head>
-    <title>Palautuskansio</title>
-    <meta charset= "UTF-8">
-    <style>
-        #otsikko{
-            background-color: aqua;
-            width: 300px;
-        }
-        #kuva{
-            position: relative;
-            left: 1000px;
-
-        }
-    </style>
-    </head>
-    <body>
-        <button id="MyButton" onclick="MyFunction()"><h1 id="otsikko">Minun nettisivuni</h1></button>
-        <ul>
-                    <li><a href="./demo1.html">Demo 1</a></li>
-                    <li><a href="./demo2.html">Demo 2</a></li>
-                    <li><a href="./demo6.html">Demo 6</a></li>
-                    <li><a href="./harj1.html">Harjoitus 1</a></li>
-                    <li><a href="./harj2.html">Harjoitus 2</a></li>
-                    <li><a href="./Harjoitus6.html">Harjoitus 6</a></li>
-                    <li><a href="./Harjoitus7.html">Kellot soi vai soiko?</a></li>
-        </ul>
-        <p id="hasupaikka"></p>
-        <p id="counter">Click counter:</p>
-        <div id="kuva">
-            <img src="./Kuvat/pepega.jpg"style="width:50px">
-        </div>
-        <button style="display: none;" id="pepe">Something to happen</button>
-        <script>
-            var kerrat= 0
-            function MyFunction(){
-                kerrat=kerrat + 1
-                document.getElementById("counter").innerHTML="Click counter: "+ kerrat
-                if(kerrat==5){
-                let nappi= document.getElementById("pepe")
-                let kuva= document.getElementById("kuva")
-                nappi.style.display="block"
-                nappi.addEventListener("click",function(){
-                const paivitysNopeus = 5;
-                const sivu = 400;
-                let paikkaX = 0;
-                let suuntaX =1 
-
-                var idVar2 =setInterval( () =>{
-                paikkaX = suuntaX + paikkaX
-                if(paikkaX>sivu || paikkaX<0){
-                suuntaX=suuntaX*(1)}
-
-                kuva.style.right =paikkaX + "px";
-                clearInterval(idVar2)
-                
-
-            },paivitysNopeus)
-        })
-    } 
-}
-        </script>
-    </body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Development</title>
+</head>
+<body>
+ <a href="./Harjoitus7.html">Hey</a>
+</body>
 </html>

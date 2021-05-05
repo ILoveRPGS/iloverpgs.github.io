@@ -1,0 +1,299 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Spartan', sans-serif;
+
+}
+body{
+    background-color: burlywood;
+}
+#nav{
+    height: 4rem;
+    width: 100%;
+}
+#contents{
+    height: 2rem;
+    width: 90%;
+    margin-top: 8rem;
+    font-size: 2rem;
+    letter-spacing: 0.05rem;
+    text-align: right;
+    
+}
+a{
+    color: rgb(189, 117, 28);
+    text-decoration: none;
+    padding-left: 1.5rem;
+}
+#kuva{
+    background-image: url("../images/nainen.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    width: 100%;
+    height: 50rem;
+    opacity: 50%;
+}
+#otsikkoteksti{
+    position: relative;
+    font-size: 4vw;
+    top:10rem;
+    left: 4rem;
+    color: rgb(241, 156, 45);
+    width: 50rem;
+}
+#kplteksti{
+    position: relative;
+    font-size: 2.5vw;
+    top:10rem;
+    left: 4rem;
+    color: rgb(241, 156, 45);
+    width: 60rem;
+}
+#Index{
+    position: relative;
+    height: 2rem;
+    width: 5rem;
+    top: 4rem;
+    font-size: 7rem;
+    
+}
+#kuva1{
+    background-image: url("../images/nainen.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    width: 100%;
+    height: 40rem;
+    opacity: 50%;
+}
+.forms{
+    opacity: 90%;
+    left: 50vh;
+    top: 5vh;
+    position: relative;
+    background-color: #bd8a58;
+    padding: 2vh;
+    width: 30vh;
+}
+textarea{
+  min-height:100px;
+  max-height:200px;
+  height: auto;
+  min-width: 100px;
+  max-width: 300px;
+}
+#rekisteroidy{
+    text-decoration: none;
+    border-radius: 0.5rem;
+    height: 4rem;
+    width: 16rem;
+    background-color: #6ae67e;
+    font-size: 1.2rem;
+    position: relative;
+}
+#tyyppilinkki{
+    color: rgb(59, 157, 2);
+    text-decoration: underline;
+    font-size: 1.5vh;
+}
+#paivakirjascroll{
+    margin-top: 1rem;
+    margin-left: 1rem;
+    position: relative;
+    height: 40rem;
+    width: 30rem;
+    background-color: burlywood;
+    align-self: flex-start;
+}
+.paivakirjadiv{
+    font-size: 1.1rem;
+    margin-left: 2rem;
+    height:10rem;
+    width:25rem;
+    background-color: #bd8a58;
+    margin-bottom: 1rem;
+    border: 5px  solid #aa6f34;
+}
+.div-a{
+    color: burlywood;
+}
+#paivakirjascroll2{
+    margin-top: 1rem;
+    margin-left: 1rem;
+    position: relative;
+    height: 40rem;
+    width: 30rem;
+    background-color: burlywood;
+    
+}
+#paivakirjascroll3{
+    margin-top: 1rem;
+    margin-left: 1rem;
+    position: relative;
+    height: 40rem;
+    width: 30rem;
+    background-color: burlywood;
+    align-self: flex-end;
+}
+#hallintanakyma{
+    display: flex;
+    justify-content: space-evenly;
+    height: 41rem;
+    width: 100%;
+    position: relative;
+}    
+.dropdown-content a {
+    display: none;
+  }
+
+@media only screen and (max-width: 630px){
+    
+
+    #Index{
+        position: relative;
+        height: 2vh;
+        width: 100%;
+        top: 20vh;
+        font-size: 15vw;
+        text-align: center;
+    }
+    
+    .dropbtn {
+        background-image: url("./images/valikko.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        border: none;
+        cursor: pointer;
+        width: 40vw;
+        height: 15vh;
+      }
+      
+      .dropdown {
+        position: relative;
+        display: inline-block;
+        position: relative;
+        left: 60vw;
+      }
+      
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #bd8a58;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+      }
+      
+      .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+      }
+      
+      .dropdown-content a:hover {background-color: #f1f1f1}
+      
+      .dropdown:hover .dropdown-content {
+        display: block;
+      }
+      #nav{
+        height: 2rem;
+        width: 100%;
+    }
+    #contents{
+       visibility: hidden;
+    }
+    #otsikkoteksti{
+    position: relative;
+    font-size: 9.5vw;
+    width: 100%;
+    left: 5px;
+}
+    #kplteksti{
+    position: relative;
+    font-size: 5.2vw;
+    width: 100%;
+    left: 5px;
+    }
+    #kuva{
+    background-image: url("../images/nainen.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    width: 100%;
+    height: 50rem;
+    opacity: 50%;
+}
+    .forms{
+        opacity: 90%;
+        top: 2rem;
+        padding: 2vw;
+        border: 1rem solid #bd8a58;
+        left: 2vw;
+        position: relative;
+        background-color: #bd8a58;}
+    input.forms{
+        width: 2vw;
+        position: relative;
+        background-color: #bd8a58;}
+
+    #rekisteroidy{
+        text-decoration: none;
+        border-radius: 0.5rem;
+        height: 3rem;
+        width: 12rem;
+        background-color: #6ae67e;
+        font-size: 1.2rem;
+        position: relative;
+    }
+    .paivakirjadiv{
+        font-size: 1.1rem;
+        margin-left: 2rem;
+        height:10rem;
+        width:30vh;
+        background-color: #bd8a58;
+        margin-bottom: 1rem;
+        border: 5px  solid #aa6f34;
+    }   
+    #paivakirjascroll{
+        margin-top: 1rem;
+        margin-left: 1rem;
+        position: relative;
+        height: 40vh;
+        width: 90%;
+        background-color: burlywood;
+        align-self: flex-start;
+    }
+    .paivakirjascroll1{
+        height: 40vh;
+        width: 30vh;
+        align-self: flex-start;
+        border: 5px solid #aa6f34;
+    }
+    
+    #paivakirjascroll2{
+        margin-top: 0;
+        height: 40vh;
+        width: 30vh;
+        border: 5px solid #aa6f34;
+    }
+    #paivakirjascroll3{
+        margin-top: 1 vh;
+        height: 40vh;
+        width: 30vh;
+        align-self: flex-end;
+        right: 26vw;
+        border: 5px solid #aa6f34;
+    }
+    #hallintanakyma{
+        margin-top: 2vh;
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        position: relative;
+    }
+}

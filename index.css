@@ -1,0 +1,116 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Helvetica', serif;
+}
+header{
+    background-color: grey;
+    min-height: 100vh;
+    width: 100%;
+    margin: auto;
+    background-image: url("https://w.wallhaven.cc/full/4x/wallhaven-4xee2v.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    box-shadow: 2px 2px 5px rgb(137, 202, 255);
+    background-color: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5));
+}
+header h1{
+    color: white;
+    text-align: center;
+    font-size: 80px;
+    padding: 1vw;
+}
+.introbox{
+    background-color: rgba(0,0,0,0.5);
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 250px;
+}
+.text-box{
+    color: white;
+    text-align: center;
+}
+.text-box-introduction{
+    color: black;
+    text-align: center;
+    font-size: 2rem;
+    width: 50%;
+    height: 40vh;
+}
+.text-box-introduction p{
+    font-size: 1.5rem;
+}
+.introduction{
+    font-size: 2vw;
+    height: 50vh;
+    width: 100%;
+    background-color:#62676b;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: inset 0 0 10px rgb(59, 59, 59);
+}
+.pages{
+    background-image:linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),url("https://w.wallhaven.cc/full/45/wallhaven-45vkj9.jpg");
+    min-height: 40vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    flex-direction: column;
+}
+#show-box{
+    width: 80%;
+    height: 30vh;
+    display: flex;
+    justify-content: space-evenly;
+}
+.page{
+    height: 30vh;
+    width: 25vh;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    margin: auto;
+    border-radius: 10px;
+}
+.page a{
+    text-align: center;
+    font-size: 2.5vh;
+    margin: auto;
+}
+.text-box-pages{
+    color: white;
+    text-align: center;
+    font-size: 2rem;
+    width: 50%;
+    height: 20vh;
+}
+.text-box-pages p{
+    margin-top: 10px;
+    font-size: 1.5rem;
+}
+.blur{
+    backdrop-filter: blur(5px);
+    height: 60vh;
+    width: 100%;
+    padding: 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+img{
+    width: 100%;
+    height: 60%;
+    border-radius: 10px;
+}

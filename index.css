@@ -11,7 +11,7 @@ header{
     min-height: 100vh;
     width: 100%;
     margin: auto;
-    background-image: url("https://w.wallhaven.cc/full/4x/wallhaven-4xee2v.jpg");
+    background-image: url("./Kuvat/wallhaven-4xee2v.jpg");
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -85,7 +85,7 @@ header h1{
     justify-content: space-evenly;
 }
 .pages{
-    background-image:linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),url("https://w.wallhaven.cc/full/45/wallhaven-45vkj9.jpg");
+    background-image:linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),url("./Kuvat/wallhaven-45vkj9.jpg");
     min-height: 100vh;
     background-attachment: fixed;
     background-position: center;

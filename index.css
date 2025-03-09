@@ -6,6 +6,11 @@
     box-sizing: border-box;
     font-family: 'Open Sans', sans-serif;
 }
+p {
+    color: black;
+    font-size: 0.75rem;
+    margin: auto;
+}
 header{
     background-color: grey;
     min-height: 100vh;
@@ -31,8 +36,7 @@ h1{
 .introbox{
     background-color: rgba(0,0,0,0.5);
     width: 100%;
-    height: 100vh;
-    max-height: fit-content;
+    height: 40vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -51,6 +55,7 @@ h1{
 }
 .text-box-introduction p{
     font-size: 2vw;
+    color: white;
 }
 .introduction{
     height: 100vh;
@@ -80,26 +85,6 @@ h1{
     text-align: center;
     margin: auto;
     color: white;
-}
-.showcase{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-}
-.pages{
-    background-image:linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),url("./Kuvat/wallhaven-45vkj9.jpg");
-    min-height: 100vh;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    flex-direction: column;
-}
-#show-box{
-    width: 80%;
-    height: 30vh;
-    display: flex;
-    justify-content: space-evenly;
 }
 .page{
     height: 30vh;
@@ -139,26 +124,99 @@ h1{
     color: white;
     text-align: center;
     font-size: 2rem;
-    width: 50%;
-    height: 20vh;
+    width: 100%;
+    height: 40vh;
+    padding: 2vh;
+
 }
 .text-box-pages p{
     margin-top: 10px;
     font-size: 1.5rem;
+    color: white;
 }
 .blur{
     /*backdrop-filter: blur(5px);*/
-    height: 69vh;
+    height: 160vh;
     width: 100%;
     padding: 1px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+
+}
+.showcase{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.pages{
+    background-image:linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),url("./Kuvat/wallhaven-45vkj9.jpg");
+    height: 160vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    flex-direction: column;
+}
+#show-box{
+    width: 80%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    max-height: fit-content;
 }
 img{
     width: 100%;
     height: 60%;
     border-radius: 4px 4px 0 0;
     object-fit: cover;
+}
+@media screen and (max-width: 768px){
+    h1{
+        font-size: 8vw;
+    }
+    .text-box-introduction{
+        width: 80%;
+    }
+    .text-box-introduction p{
+        font-size: 3vw;
+    }
+    .tyot-section h2{
+        font-size: 4rem;
+    }
+    .page{
+        height: 20vh;
+        width: 20vh;
+    }
+    .page a{
+        font-size: 2vh;
+    }
+    .text-box-pages{
+        font-size: 1.5rem;
+    }
+    .text-box-pages p{
+        font-size: 1rem;
+    }
+    #show-box{
+        width: 100%;
+        height: 200vh;
+    }
+    .blur{
+        height: 200vh;
+    }
+    .pages{
+        height: 200vh;
+    }
+   .text-box-introduction p {
+        font-size: 1rem;
+        color: white;
+    }
+    .introbox{
+        height: 20vh;
+    }
+
+
+    
 }

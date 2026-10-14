@@ -1,0 +1,18 @@
+# Local secrets (database settings for the PHP school projects)
+config.php
+!config.sample.php
+
+# OS and editor files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+.DS_Store
+*:Zone.Identifier
+*.Zone.Identifier
+.vscode/
+.idea/
+*.swp
+*~
+
+# Logs
+*.log

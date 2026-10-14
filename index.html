@@ -1,78 +1,622 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Development</title>
-    <link rel="stylesheet" type="text/css" href="index.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mitja Savijärvi, software developer</title>
+<meta name="description" content="Mitja Savijärvi, software developer and student in Tampere, Finland. Founder of Claylake Interactive. Open to part-time work alongside studies.">
+<meta name="theme-color" content="#03060f">
+<meta name="color-scheme" content="dark">
+<link rel="canonical" href="https://iloverpgs.github.io/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Mitja Savijärvi">
+<meta property="og:title" content="Mitja Savijärvi, software developer">
+<meta property="og:description" content="Software developer and student in Tampere. Founder of Claylake Interactive. Open to part-time work alongside studies.">
+<meta property="og:url" content="https://iloverpgs.github.io/">
+<meta property="og:image" content="https://iloverpgs.github.io/assets/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Mitja Savijärvi, software developer and student in Tampere, Finland, next to a slash and a text cursor.">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="assets/img/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<script>
+  /* Runs before first paint. Slideshow mode is switched on here so there is no flash of the stacked page.
+     data-anim="off" is set when the visitor has turned animations off or the system asks for reduced motion.
+     Until main.js has set the start states of the first run, the CSS keeps the parts of the slide unpainted (html.slides:not(.ready));
+     with data-anim="off" the page is complete from the first paint.
+     If main.js has not reported in after 3.5 s, slideshow mode is switched off again and the page falls back
+     to the stacked, fully visible document. */
+  (function (d) {
+    var r = d.documentElement, ids = ['hello','path','skills','trinketbot','architecture','numbers','how-i-work','learning-curve'];
+    var h = (location.hash || '').slice(1), id = ids.indexOf(h) > -1 ? h : 'hello', off = false;
+    try { off = localStorage.getItem('anim') === 'off'; } catch (e) {}
+    try { off = off || matchMedia('(prefers-reduced-motion: reduce)').matches; } catch (e) {}
+    r.classList.add('js', 'slides');
+    r.setAttribute('data-slide', id);
+    if (off) r.setAttribute('data-anim', 'off');
+    setTimeout(function () { if (!window.__ok) { r.classList.remove('slides', 'js'); r.removeAttribute('data-slide'); } }, 3500);
+  })(document);
+</script>
+<link rel="preload" href="assets/fonts/jetbrains-mono-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/figtree-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/instrument-serif-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/css/fonts.css">
+<link rel="stylesheet" href="assets/css/site.css">
 </head>
-<header>
-    <div class="introbox">
-        <div class="text-box">
-            <h1>Mitja Savijärvi</h1>
-            <h2>Studying Software Development</h2>
-        </div>
-    </div>
-</header>
 <body>
-    <section class="introduction">
-        <div class="text-box-introduction">
-            <h1>Here's what I do</h1>
-            <br>
-            <p>I am a student in Vocational College Tredu in Tampere Hepolamminkatu.
-            I am studying as a Software Developer and I am currently in my third year of studies.
-            I have learned a lot about programming in different frameworks and languages such as <strong>PHP</strong>, <strong>React</strong>, <strong>C#</strong>, <strong>HTML</strong>, <strong>CSS</strong>, <strong>JavaScript</strong> and <strong>SQL</strong>, <strong>Bootstrap</strong>, <strong>Node.js</strong> and <strong>more</strong>.
-            I have also used tools such as <strong>MongoDB</strong>, <strong>Heroku</strong>, <strong>PhpMyAdmin</strong>, <strong>PostgreSQL</strong> and how to use them in a project.
-            I have also learned how to use version control tools such as <strong>Git</strong> and <strong>GitHub</strong> aswell. </p>
+<a class="skip" href="#main">Skip to content</a>
+<div class="bg" aria-hidden="true"></div>
+
+<!-- ======================= SHELL: top bar ======================= -->
+<header class="bar" id="bar">
+  <a class="mark" href="#hello" data-go="hello" aria-label="Mitja Savijärvi, run /hello">
+    <svg class="mark-ico" viewBox="0 0 64 64" width="34" height="34" aria-hidden="true" focusable="false"><rect width="64" height="64" rx="14" fill="#0a1430"/><polygon points="8.5,56 18.5,56 36.5,8 26.5,8" fill="#8fd3ff"/><rect x="31.5" y="47" width="24" height="9" fill="#d9f1ff"/></svg>
+    <span class="mark-name">Mitja Savijärvi</span>
+  </a>
+  <nav class="cmds" id="cmds" aria-label="Commands">
+    <ul>
+      <li><a href="#hello" data-go="hello"><span class="cn">/hello</span><span class="cd">Who I am</span></a></li>
+      <li><a href="#path" data-go="path"><span class="cn">/path</span><span class="cd">Work, studies and contact</span></a></li>
+      <li><a href="#skills" data-go="skills"><span class="cn">/skills</span><span class="cd">What I work with</span></a></li>
+      <li><a href="#trinketbot" data-go="trinketbot"><span class="cn">/trinketbot</span><span class="cd">The product I build</span></a></li>
+      <li><a href="#architecture" data-go="architecture"><span class="cn">/architecture</span><span class="cd">How it fits together</span></a></li>
+      <li><a href="#numbers" data-go="numbers"><span class="cn">/numbers</span><span class="cd">Code, tests and checks</span></a></li>
+      <li><a href="#how-i-work" data-go="how-i-work"><span class="cn">/how-i-work</span><span class="cd">Process and decisions</span></a></li>
+      <li><a href="#learning-curve" data-go="learning-curve"><span class="cn">/learning-curve</span><span class="cd">School work, oldest first</span></a></li>
+    </ul>
+  </nav>
+  <button class="menu-btn" id="menu-btn" type="button" aria-expanded="false" aria-controls="cmds">/menu</button>
+  <p class="count" aria-hidden="true"><span id="count-n">1</span>/8</p>
+</header>
+
+<!-- ======================= SHELL: command console (decorative) ======================= -->
+<section class="console" id="console" aria-hidden="true">
+  <div class="cin">
+    <span class="cin-chip" id="cin-chip"><span id="cin-text"></span></span>
+    <span class="caret" id="caret"></span>
+    <span class="ph" id="cin-ph"><span class="ph-k">Click a command above, or press 1 to 8</span><span class="ph-t">Tap /menu to pick a command</span></span>
+    <span class="send">Enter</span>
+  </div>
+  <div class="cout">
+    <p class="prompt" id="prompt">&gt; /hello&nbsp; ready</p>
+    <div class="log" id="log">
+      <div class="log-win"><div class="log-in" id="log-in"></div></div>
+      <p class="prog"><span class="br">[</span><span class="pb"><i id="pb-fill"></i></span><span class="br">]</span><span class="pct" id="pct">0%</span></p>
+    </div>
+  </div>
+</section>
+<p class="sr-only" id="live" role="status" aria-live="polite"></p>
+
+<!-- ======================= SLIDES ======================= -->
+<main id="main" class="stage-area">
+
+  <!-- 1 /hello -->
+  <section class="slide" id="hello" data-cmd="/hello" aria-labelledby="name">
+    <div class="slide-in hello">
+      <div class="hello-copy">
+        <h1 id="name" class="name" tabindex="-1" data-step="name" data-fx="name"><span class="nm"><span>Mitja</span></span> <span class="nm"><span>Savijärvi</span></span><span class="name-caret" aria-hidden="true"></span></h1>
+        <p class="role" data-step="role" data-fx="type">Software developer and student.</p>
+        <p class="cta" data-step="links" data-fx="pop-each">
+          <a class="btn btn-primary" href="#path" data-go="path">Start the tour</a>
+          <a class="btn btn-ghost" href="#path" data-go="path" data-then="contact">Get in touch</a>
+        </p>
+      </div>
+      <!-- the status panel: terminal output. The prompt lines are decorative; the list is real text and is never rewritten, only revealed. -->
+      <div class="who" data-step="panel" data-fx="print">
+        <p class="who-ps who-prompt" aria-hidden="true"><span class="ps">$</span> <span class="vb">whoami</span></p>
+        <dl class="who-list">
+          <div class="who-row"><dt>role</dt><dd>Software developer and student</dd></div>
+          <div class="who-row"><dt>location</dt><dd>Tampere, Finland</dd></div>
+          <div class="who-row"><dt>work</dt><dd>Founder of Claylake&nbsp;Interactive</dd></div>
+          <div class="who-row"><dt>studies</dt><dd>TAMK, Bachelor's, Software Engineering, 3rd year</dd></div>
+          <div class="who-row who-status"><dt>status</dt><dd><span class="avail-dot" aria-hidden="true"></span>Open to part-time work alongside studies</dd></div>
+        </dl>
+        <p class="who-ps who-end" aria-hidden="true"><span class="ps">$</span> <span class="cur"></span></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2 /path (with the contact card) -->
+  <section class="slide" id="path" data-cmd="/path" aria-labelledby="h-path">
+    <div class="slide-in path-slide">
+      <h2 class="cmd" id="h-path" tabindex="-1" data-step="title" data-fx="cmd">/path</h2>
+      <div class="slide-body">
+      <div class="path-grid">
+        <ol class="path">
+          <li data-step="rows" data-fx="box"><p class="when">Present</p><div><h3>Founder and lead developer, Claylake Interactive</h3><p>Building TrinketBot.</p></div></li>
+          <li data-step="rows" data-fx="box"><p class="when">In progress, 3rd year</p><div><h3>Tampere University of Applied Sciences (TAMK)</h3><p>Bachelor's studies, Communications and Technology, Software Engineering.</p></div></li>
+          <li data-step="rows" data-fx="box"><p class="when">2020 to 2023</p><div><h3>Tredu, Tampere</h3><p>Vocational qualification in software development. Graduated 2023.</p></div></li>
+        </ol>
+        <div class="contact" id="contact" data-step="contact" data-fx="box">
+          <h3 class="ct-h" id="ct-h" tabindex="-1">Open to part&#8209;time work alongside studies.</h3>
+          <p class="ct-lede">Email is the best way to reach me.</p>
+          <p class="mail-addr" id="mail-addr" data-step="address" data-fx="type">mitja.savijarvi [at] gmail.com</p>
+          <p class="mail-actions" data-step="address" data-fx="pop-each">
+            <a class="btn btn-primary" id="mail-link" href="#path" hidden>Write an email</a>
+            <button class="btn btn-ghost" id="mail-copy" type="button" hidden>Copy address</button>
+            <span class="mail-note" id="mail-note" role="status"></span>
+          </p>
         </div>
-    </section>
-    <section class="pages">
-        <div class="blur">
-            <div class="text-box-pages">
-                <h1>Work project examples</h1>
-                <p>These are some of my work so far.</p>
-            </div>
-            <div id="show-box">
-                <div class="tyot-section">
-                    <h2>PHP</h2>
-                    <div class="showcase">
-                        <div class="page">
-                            <img src="./Kuvat/Paivakirja.JPG"alt="page" ></img>
-                            <a href="https://github.com/ILoveRPGS/iloverpgs.github.io/tree/master/P%C3%A4iv%C3%A4kirjaty%C3%B6">Päiväkirja</a>
-                            <p>Linkki GitHubiin</p>
-                        </div>
-                        <div class="page">
-                            <img src="./Kuvat/lantapahtuma.JPG"alt="page" ></img>
-                            <a href="https://github.com/ILoveRPGS/iloverpgs.github.io/tree/master/MVC-harjoitus">Lantapahtuma MVC</a>
-                            <p>Linkki GitHubiin</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="tyot-section">
-                <h2>HTML ja Unity</h2>
-                    <div class="showcase">
-                        <div class="page">
-                            <img src="./Kuvat/kellotsoi.JPG"alt="page" ></img>
-                            <a href="./index_tiedostot/Harjoitus7.html">Kellot soi, vai soiko?</a>
-                        </div>
-                        <div class="page">
-                            <img src="./Kuvat/Pelikuva.jpg"alt="page" ></img>
-                            <a href="https://play.unity.com/mg/other/korttipeli">Card Game Adventure</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> 
-    </section>
-    <section class="introduction">
-        <div class="text-box-introduction">
-            <h1>Game Development</h1>
-            <br>
-            <p>I have learned how to make games by using <strong>C#</strong> in <strong>Unity</strong> and <strong>HTML5</strong> games by <strong>JavaScript</strong> 
-            <br>I have some experience in 3D modeling by using <strong>Blender</strong>, and have used it in my game development.
-            <br>I have also learned how to use <strong>GitHub</strong> and <strong>Git</strong> to version control my projects.</p>
-            </p>
+      </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3 /skills -->
+  <section class="slide" id="skills" data-cmd="/skills" aria-labelledby="h-skills">
+    <div class="slide-in skills-slide">
+      <h2 class="cmd" id="h-skills" tabindex="-1" data-step="title" data-fx="cmd">/skills</h2>
+      <div class="slide-body">
+      <p class="lede" data-step="title" data-fx="lines">Where a project shows a skill, it is named under the tag.</p>
+      <div class="sk-grid">
+        <div class="sk-col">
+          <h3 class="sub-h" data-step="front" data-fx="up">Front-end</h3>
+          <ul class="tags tags-lead" data-step="front" data-fx="pop-each">
+            <li>HTML <small lang="fi">Kellot soi, vai soiko?</small></li>
+            <li>CSS <small lang="fi">Kellot soi, vai soiko?</small></li>
+            <li>JavaScript <small lang="fi">Fanikauppa</small></li>
+            <li>React <small lang="fi">Fanikauppa</small></li>
+            <li>Bootstrap</li>
+          </ul>
         </div>
-    </section>
+        <div class="sk-col">
+          <h3 class="sub-h" data-step="back" data-fx="up">Back-end</h3>
+          <ul class="tags tags-lead" data-step="back" data-fx="pop-each">
+            <li>PHP <small lang="fi">Päiväkirja</small></li>
+            <li>Node.js / Express <small>TrinketBot</small></li>
+            <li>SQL <small lang="fi">Päiväkirja</small></li>
+          </ul>
+        </div>
+        <div class="sk-col sk-wide">
+          <h3 class="sub-h" data-step="tags" data-fx="up">Backed by TrinketBot and the 2026 course projects</h3>
+          <ul class="tags" data-step="tags" data-fx="pop-each">
+            <li>TypeScript</li><li>Next.js</li><li>PostgreSQL with Drizzle</li><li>Prisma</li><li>Docker</li><li>CI/CD with GitHub Actions and GitLab CI</li><li>Git / GitHub</li><li>discord.js</li><li>Automated testing with Vitest</li>
+          </ul>
+        </div>
+        <div class="sk-col sk-wide">
+          <h3 class="sub-h sub-dim" data-step="tags" data-fx="up">Also worked with</h3>
+          <ul class="tags tags-quiet" data-step="tags" data-fx="pop-each"><li>C#</li><li>Unity</li><li>Blender</li><li>MongoDB</li><li>Heroku</li><li>C++ (course level)</li><li>Java (course level)</li></ul>
+        </div>
+      </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4 /trinketbot -->
+  <section class="slide" id="trinketbot" data-cmd="/trinketbot" aria-labelledby="h-trinketbot">
+    <div class="slide-in tb">
+      <h2 class="cmd" id="h-trinketbot" tabindex="-1" data-step="title" data-fx="cmd">/trinketbot</h2>
+      <div class="slide-body">
+      <div class="tb-grid">
+        <div class="tb-copy">
+          <p class="tagline" data-step="copy" data-fx="lines">Your stream goes live. Your Discord handles the rest.</p>
+          <p class="lede" data-step="copy" data-fx="lines">TrinketBot is a Discord bot and web dashboard for streamers, VTubers and their communities: go-live alerts, moderation and safety, welcome and roles, leveling, events and giveaways, plus a separate chat bot for Twitch channels.</p>
+          <p class="body" data-step="copy" data-fx="lines">I build it alone, as owner and lead developer at Claylake Interactive. It connects five platforms: Discord, Twitch, Kick, YouTube and TikTok.</p>
+          <p class="tb-actions" data-step="links" data-fx="pop-each"><a class="btn btn-primary" href="https://app.trinketbot.app/" rel="noopener">Open TrinketBot</a><span class="tb-note">Dashboard sign-in uses Discord.</span></p>
+          <p class="private" data-step="links" data-fx="up">The source is private. Code walkthrough on request.</p>
+          <p class="credit" data-step="links" data-fx="up">Trinket, mascot art by <a href="https://twitch.tv/malliesprout" rel="noopener">MallieSprout</a>.</p>
+        </div>
+
+        <!-- the go-live alert illustration -->
+        <figure class="stage" id="stage" data-step="alert" data-fx="alert">
+          <div class="stage-inner" role="img" aria-label="Illustration of a Discord channel. A sample streamer goes live on Twitch and the bot posts a go-live alert card with the stream title and a watch button.">
+            <div class="src" aria-hidden="true">
+              <span class="src-dot"><i class="ring"></i><i class="ring"></i></span>
+              <span class="src-name">Sample Streamer</span>
+              <span class="src-where">Twitch</span>
+              <span class="src-state">Live</span>
+            </div>
+            <span class="beam" aria-hidden="true"><i></i></span>
+            <div class="win" aria-hidden="true">
+              <div class="win-head"><span class="hash">#</span> go-live <span class="win-server">Sample Server</span></div>
+              <div class="msg msg-prev">
+                <span class="av av-plain">M</span>
+                <div class="msg-body">
+                  <p class="msg-meta"><b>Sample Mod</b> <time>Today at 17:58</time></p>
+                  <p class="msg-text">See you all on stream tonight.</p>
+                </div>
+              </div>
+              <div class="msg msg-bot">
+                <span class="av av-bot"><img src="assets/img/trinket-96.webp" alt="" width="96" height="96" loading="lazy" decoding="async"></span>
+                <div class="msg-body">
+                  <p class="msg-meta"><b>TrinketBot</b> <span class="badge">BOT</span> <time>Today at 18:30</time></p>
+                  <p class="msg-text"><span class="mention">@Live Alerts</span> Sample Streamer is live on Twitch!</p>
+                  <div class="embed">
+                    <span class="embed-glow"></span>
+                    <p class="embed-author">Sample Streamer</p>
+                    <p class="embed-title">Sample stream title goes here</p>
+                    <p class="embed-desc">Playing Sample Game</p>
+                    <div class="thumb">
+                      <svg class="thumb-art" viewBox="0 0 320 170" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false">
+                        <defs><linearGradient id="thumb-sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1a3a80"/><stop offset="1" stop-color="#0a1530"/></linearGradient></defs>
+                        <rect width="320" height="170" fill="url(#thumb-sky)"/>
+                        <circle cx="236" cy="54" r="34" fill="none" stroke="#8fd3ff" stroke-opacity=".3"/>
+                        <circle cx="236" cy="54" r="19" fill="#d9f1ff" fill-opacity=".92"/>
+                        <path d="M0 126 L58 80 L104 114 L162 68 L228 124 L286 90 L320 110 V170 H0Z" fill="#12265a"/>
+                        <path d="M0 150 L70 114 L130 142 L200 106 L270 146 L320 128 V170 H0Z" fill="#070e24"/>
+                      </svg>
+                      <span class="thumb-live"><i></i>Live</span><span class="thumb-scan"></span>
+                    </div>
+                    <p class="embed-btn">Watch on Twitch</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <figcaption>Illustration, not a screenshot. Names and titles are samples.</figcaption>
+        </figure>
+
+        <!-- dashboard switch panel: a picture, not controls. The state is printed, so colour is never the only signal. -->
+        <figure class="panel switch-panel" data-step="panel" data-fx="panel">
+          <div class="sw-inner" role="img" aria-label="Illustration of a dashboard settings panel with four switches: go-live alerts on, scam shield on, welcome messages on, leveling off.">
+            <div class="panel-bar" aria-hidden="true"><span>Dashboard</span><span class="panel-bar-r">Sample server</span></div>
+            <div class="sw-row" aria-hidden="true"><span class="sw-label">Go-live alerts</span><span class="sw-state">On</span><span class="sw-toggle is-on"><i></i></span></div>
+            <div class="sw-row" aria-hidden="true"><span class="sw-label">Scam shield</span><span class="sw-state">On</span><span class="sw-toggle is-on"><i></i></span></div>
+            <div class="sw-row" aria-hidden="true"><span class="sw-label">Welcome messages</span><span class="sw-state">On</span><span class="sw-toggle is-on"><i></i></span></div>
+            <div class="sw-row" aria-hidden="true"><span class="sw-label">Leveling</span><span class="sw-state">Off</span><span class="sw-toggle"><i></i></span></div>
+          </div>
+          <figcaption>Illustration, not a screenshot. Names and settings are samples.</figcaption>
+        </figure>
+      </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5 /architecture -->
+  <section class="slide" id="architecture" data-cmd="/architecture" aria-labelledby="h-architecture">
+    <div class="slide-in arch">
+      <h2 class="cmd" id="h-architecture" tabindex="-1" data-step="title" data-fx="cmd">/architecture</h2>
+      <div class="slide-body">
+      <figure class="panel diagram-panel" data-step="layout" data-fx="box">
+        <div class="panel-bar"><span>How it fits together</span><span class="panel-bar-r">Simplified</span></div>
+        <div class="diagram-pad">
+
+          <svg class="diagram h" viewBox="0 0 1184 340" role="img" aria-labelledby="dh-t dh-d">
+            <title id="dh-t">TrinketBot architecture</title>
+            <desc id="dh-d">Discord sends gateway events to the bot and receives replies and alerts. The bot and the HTTP API run in one process. Twitch and Kick call the HTTP API by webhook. The bot polls YouTube and TikTok every 5 minutes. The bot and the HTTP API read and write PostgreSQL. The Next.js dashboard calls the HTTP API, with Discord login.</desc>
+
+            <g class="dg" data-step="diagram" data-fx="dg">
+              <rect class="proc" x="372" y="2" width="330" height="336"/>
+              <text class="t-tag" x="388" y="328">one process</text>
+              <rect class="box core" x="392" y="14" width="290" height="148"/>
+              <text class="t-tag" x="408" y="38">process</text>
+              <text class="t-title" x="408" y="76">Bot</text>
+              <text class="t-sub" x="408" y="106">Node 22, TypeScript</text>
+              <text class="t-sub" x="408" y="128">discord.js 14</text>
+              <rect class="box core" x="392" y="182" width="290" height="124"/>
+              <text class="t-tag" x="408" y="206">process</text>
+              <text class="t-title" x="408" y="244">HTTP API</text>
+              <text class="t-sub" x="408" y="274">Express 5</text>
+            </g>
+
+            <g class="dg" data-step="diagram" data-fx="dg">
+              <rect class="box ext" x="0" y="10" width="200" height="84"/>
+              <text class="t-tag" x="16" y="34">external</text>
+              <text class="t-title" x="16" y="72">Discord</text>
+              <line class="arrow" pathLength="1" x1="200" y1="38" x2="387" y2="38"/>
+              <path class="head" d="M391 38 l-9 -4.5 v9 z"/>
+              <text class="t-lab" x="216" y="30">gateway events</text>
+              <line class="arrow" pathLength="1" x1="392" y1="74" x2="205" y2="74"/>
+              <path class="head" d="M201 74 l9 -4.5 v9 z"/>
+              <text class="t-lab" x="216" y="96">replies, alerts</text>
+            </g>
+
+            <g class="dg" data-step="diagram" data-fx="dg">
+              <rect class="box ext" x="0" y="123" width="200" height="84"/>
+              <text class="t-tag" x="16" y="147">external</text>
+              <text class="t-title" x="16" y="185">YouTube, TikTok</text>
+              <line class="arrow" pathLength="1" x1="392" y1="160" x2="205" y2="160"/>
+              <path class="head" d="M201 160 l9 -4.5 v9 z"/>
+              <text class="t-lab" x="216" y="152">polls every 5 min</text>
+            </g>
+
+            <g class="dg" data-step="diagram" data-fx="dg">
+              <rect class="box ext" x="0" y="236" width="200" height="84"/>
+              <text class="t-tag" x="16" y="260">external</text>
+              <text class="t-title" x="16" y="298">Twitch, Kick</text>
+              <line class="arrow" pathLength="1" x1="200" y1="276" x2="387" y2="276"/>
+              <path class="head" d="M391 276 l-9 -4.5 v9 z"/>
+              <text class="t-lab" x="216" y="268">webhook</text>
+            </g>
+
+            <g class="dg" data-step="diagram" data-fx="dg">
+              <rect class="box core" x="842" y="14" width="342" height="140"/>
+              <text class="t-tag" x="858" y="38">store</text>
+              <text class="t-title" x="858" y="76">PostgreSQL</text>
+              <text class="t-sub" x="858" y="106">drizzle-orm,</text>
+              <text class="t-sub" x="858" y="128">generated migrations</text>
+              <line class="arrow" pathLength="1" x1="687" y1="60" x2="837" y2="60"/>
+              <path class="head" d="M683 60 l9 -4.5 v9 z"/><path class="head" d="M841 60 l-9 -4.5 v9 z"/>
+              <text class="t-lab" x="700" y="52">reads / writes</text>
+              <polyline class="arrow" pathLength="1" fill="none" points="687,244 776,244 776,120 837,120"/>
+              <path class="head" d="M683 244 l9 -4.5 v9 z"/><path class="head" d="M841 120 l-9 -4.5 v9 z"/>
+              <text class="t-lab" x="784" y="178">reads / writes</text>
+            </g>
+
+            <g class="dg" data-step="diagram" data-fx="dg">
+              <rect class="box ext" x="842" y="190" width="342" height="130"/>
+              <text class="t-tag" x="858" y="214">client</text>
+              <text class="t-title" x="858" y="252">Dashboard</text>
+              <text class="t-sub" x="858" y="282">Next.js 15, React 19</text>
+              <text class="t-sub" x="858" y="304">Discord login</text>
+              <line class="arrow" pathLength="1" x1="842" y1="290" x2="691" y2="290"/>
+              <path class="head" d="M687 290 l9 -4.5 v9 z"/>
+              <text class="t-lab" x="740" y="282">calls</text>
+            </g>
+          </svg>
+
+          <svg class="diagram v" viewBox="0 0 360 712" role="img" aria-labelledby="dv-t dv-d">
+            <title id="dv-t">TrinketBot architecture</title>
+            <desc id="dv-d">Discord sends gateway events to the bot and receives replies and alerts. The bot and the HTTP API run in one process. Twitch and Kick call the HTTP API by webhook. The bot polls YouTube and TikTok every 5 minutes. The bot and the HTTP API read and write PostgreSQL. The Next.js dashboard calls the HTTP API, with Discord login.</desc>
+
+            <g class="dg" data-step="diagram" data-fx="dg">
+              <rect class="proc" x="5" y="170" width="350" height="204"/>
+              <text class="t-tag" x="82" y="191">one process</text>
+              <rect class="box core" x="14" y="200" width="160" height="150"/>
+              <text class="t-tag" x="28" y="224">process</text>
+              <text class="t-title" x="28" y="256">Bot</text>
+              <text class="t-sub" x="28" y="280">Node 22</text>
+              <text class="t-sub" x="28" y="298">TypeScript</text>
+              <text class="t-sub" x="28" y="316">discord.js 14</text>
+              <rect class="box core" x="186" y="200" width="160" height="150"/>
+              <text class="t-tag" x="200" y="224">process</text>
+              <text class="t-title" x="200" y="256">HTTP API</text>
+              <text class="t-sub" x="200" y="280">Express 5</text>
+            </g>
+            <g class="dg" data-step="diagram" data-fx="dg">
+              <rect class="box ext" x="10" y="10" width="165" height="100"/>
+              <text class="t-tag" x="24" y="34">external</text>
+              <text class="t-title" x="24" y="68">Discord</text>
+              <line class="arrow" pathLength="1" x1="70" y1="114" x2="70" y2="196"/>
+              <path class="head" d="M70 110 l-4.5 9 h9 z"/><path class="head" d="M70 200 l-4.5 -9 h9 z"/>
+              <text class="t-lab" x="82" y="140">events in</text>
+              <text class="t-lab" x="82" y="158">alerts out</text>
+            </g>
+            <g class="dg" data-step="diagram" data-fx="dg">
+              <rect class="box ext" x="185" y="10" width="165" height="136"/>
+              <text class="t-tag" x="199" y="34">client</text>
+              <text class="t-title" x="199" y="68">Dashboard</text>
+              <text class="t-sub" x="199" y="92">Next.js 15</text>
+              <text class="t-sub" x="199" y="110">React 19</text>
+              <text class="t-sub" x="199" y="128">Discord login</text>
+              <line class="arrow" pathLength="1" x1="290" y1="150" x2="290" y2="196"/>
+              <path class="head" d="M290 200 l-4.5 -9 h9 z"/>
+              <text class="t-lab" x="302" y="166">calls</text>
+            </g>
+            <g class="dg" data-step="diagram" data-fx="dg">
+              <rect class="box core" x="100" y="428" width="160" height="92"/>
+              <text class="t-tag" x="114" y="452">store</text>
+              <text class="t-title" x="114" y="484">PostgreSQL</text>
+              <text class="t-sub" x="114" y="506">drizzle-orm</text>
+              <line class="arrow" pathLength="1" x1="140" y1="354" x2="140" y2="424"/>
+              <path class="head" d="M140 350 l-4.5 9 h9 z"/><path class="head" d="M140 428 l-4.5 -9 h9 z"/>
+              <line class="arrow" pathLength="1" x1="220" y1="354" x2="220" y2="424"/>
+              <path class="head" d="M220 350 l-4.5 9 h9 z"/><path class="head" d="M220 428 l-4.5 -9 h9 z"/>
+              <text class="t-lab" x="130" y="400" text-anchor="end">reads/</text>
+              <text class="t-lab" x="130" y="418" text-anchor="end">writes</text>
+              <text class="t-lab" x="230" y="400">reads/</text>
+              <text class="t-lab" x="230" y="418">writes</text>
+            </g>
+            <g class="dg" data-step="diagram" data-fx="dg">
+              <rect class="box ext" x="10" y="594" width="165" height="108"/>
+              <text class="t-tag" x="24" y="618">external</text>
+              <text class="t-title" x="24" y="650">YouTube</text>
+              <text class="t-title" x="24" y="680">TikTok</text>
+              <line class="arrow" pathLength="1" x1="30" y1="354" x2="30" y2="590"/>
+              <path class="head" d="M30 594 l-4.5 -9 h9 z"/>
+              <text class="t-lab" x="42" y="556">polls every</text>
+              <text class="t-lab" x="42" y="574">5 min</text>
+            </g>
+            <g class="dg" data-step="diagram" data-fx="dg">
+              <rect class="box ext" x="185" y="594" width="165" height="108"/>
+              <text class="t-tag" x="199" y="618">external</text>
+              <text class="t-title" x="199" y="650">Twitch</text>
+              <text class="t-title" x="199" y="680">Kick</text>
+              <line class="arrow" pathLength="1" x1="330" y1="594" x2="330" y2="354"/>
+              <path class="head" d="M330 350 l-4.5 9 h9 z"/>
+              <text class="t-lab" x="320" y="556" text-anchor="end">webhook</text>
+            </g>
+          </svg>
+        </div>
+        <div class="arch-foot" data-step="notes" data-fx="up">
+          <p class="arch-note"><b>One shared upstream.</b> One subscription or check per streamer, however many servers follow them.</p>
+          <ul class="stack" aria-label="Technologies"><li>Node 22</li><li>TypeScript</li><li>discord.js 14</li><li>Express 5</li><li>PostgreSQL</li><li>drizzle-orm</li><li>Next.js 15</li><li>React 19</li><li>Tailwind</li><li>Docker</li></ul>
+        </div>
+      </figure>
+      <p class="fig-cap" data-step="notes" data-fx="lines">Bot and HTTP API run in one process, shown by the dashed frame. Arrows are requests and events. Illustration of the design, not a live view.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6 /numbers -->
+  <section class="slide" id="numbers" data-cmd="/numbers" aria-labelledby="h-numbers">
+    <div class="slide-in nums-slide">
+      <h2 class="cmd" id="h-numbers" tabindex="-1" data-step="title" data-fx="cmd">/numbers</h2>
+      <div class="slide-body">
+      <div class="nums">
+        <figure class="panel bars" id="bars" data-step="layout" data-fx="box">
+          <div class="panel-bar"><span>Code and tests, same scale</span><span class="panel-bar-r">TypeScript lines</span></div>
+          <div class="panel-body">
+            <div class="bar-row">
+              <p class="bar-label"><span class="bar-name">Application code <small>Bot and dashboard</small></span><span class="bar-val" data-step="figures" data-fx="type">about 160,000</span></p>
+              <div class="track" aria-hidden="true"><div class="bar-fill code" style="--v:93.7" data-step="bars" data-fx="fill"></div></div>
+            </div>
+            <div class="bar-row">
+              <p class="bar-label"><span class="bar-name">Automated tests <small>Run in CI</small></span><span class="bar-val" data-step="figures" data-fx="type">about 135,000</span></p>
+              <div class="track" aria-hidden="true"><div class="bar-fill tests" style="--v:79.4" data-step="bars" data-fx="fill"></div></div>
+            </div>
+            <div class="ruler" aria-hidden="true"><span style="--v:0">0</span><span style="--v:29.4">50k</span><span style="--v:58.8">100k</span><span style="--v:88.2">150k</span></div>
+            <div class="ratio">
+              <strong data-step="figures" data-fx="type">85%</strong>
+              <p>The tests are about as large as the code they check.</p>
+            </div>
+            <p class="foot-note">As of 13 Oct 2026, measured from the repository. Blank lines and comments included.</p>
+          </div>
+        </figure>
+
+        <div class="panel cells" data-step="layout" data-fx="box">
+          <div class="panel-bar cells-bar"><span>TrinketBot</span><span class="panel-bar-r">Released only</span></div>
+          <div class="cell"><span class="n" data-step="figures" data-fx="type">5</span><span class="k">Platforms</span><p>Connected today</p></div>
+          <div class="cell"><span class="n" data-step="figures" data-fx="type">42</span><span class="k">Slash commands</span><p>Released commands only</p></div>
+          <div class="cell"><span class="n" data-step="figures" data-fx="type">13,000+</span><span class="k">Test cases</span><p>Automated, run in CI</p></div>
+          <div class="cell"><span class="n" data-step="figures" data-fx="type">3</span><span class="k">Security gates</span><p>Secret scan, dependency check and static analysis, plus a schema-drift check</p></div>
+        </div>
+      </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7 /how-i-work -->
+  <section class="slide" id="how-i-work" data-cmd="/how-i-work" aria-labelledby="h-how-i-work">
+    <div class="slide-in how-slide">
+      <h2 class="cmd" id="h-how-i-work" tabindex="-1" data-step="title" data-fx="cmd">/how-i-work</h2>
+      <div class="slide-body">
+      <h3 class="sub-h" data-step="decisions" data-fx="up">Three design decisions</h3>
+      <div class="decision-grid">
+        <div class="decision" data-step="decisions" data-fx="box"><h4>A new feature ships dark.</h4><p>Tests fail if any entry point could leak it early.</p></div>
+        <div class="decision" data-step="decisions" data-fx="box"><h4>Deleting data is a database property.</h4><p>Every per-server table cascades from one row, with a grace period the admin can skip.</p></div>
+        <div class="decision" data-step="decisions" data-fx="box"><h4>One upstream subscription per streamer.</h4><p>One Twitch or Kick subscription, or one YouTube check, per channel however many servers follow it.</p></div>
+      </div>
+      <div class="how-grid">
+        <div class="checks">
+          <h3 class="sub-h" data-step="checks" data-fx="up">Checked on every push</h3>
+          <ul class="practices">
+            <li data-step="checks" data-fx="lines">Migrations are applied to an empty database in CI, with a schema-drift check.</li>
+            <li data-step="checks" data-fx="lines">The dashboard is built in isolation, so it cannot import bot code.</li>
+            <li data-step="checks" data-fx="lines">A secret scanner, a dependency-vulnerability gate and static analysis run on every push.</li>
+            <li data-step="checks" data-fx="lines">Tests mock the database and Discord, and the test config refuses to load a real database URL.</li>
+          </ul>
+        </div>
+        <div class="how" data-step="process" data-fx="box">
+          <h3 class="sub-h">How I work</h3>
+          <p>Built with AI coding agents under a process I set: write the spec first, change in small steps, and let tests and CI decide what ships.</p>
+          <p class="how-private">The source is private. Code walkthrough on request, <a href="#path" data-go="path" data-then="contact">by email</a>.</p>
+        </div>
+      </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8 /learning-curve -->
+  <section class="slide" id="learning-curve" data-cmd="/learning-curve" aria-labelledby="h-learning-curve">
+    <div class="slide-in lc-slide">
+      <h2 class="cmd" id="h-learning-curve" tabindex="-1" data-step="title" data-fx="cmd">/learning-curve</h2>
+      <div class="slide-body">
+      <p class="lede" data-step="title" data-fx="lines">School work, shown small and honestly, oldest first. The last entry is where it led.</p>
+      <div class="lc-rows">
+      <div class="lc-row" data-group>
+        <p class="row-lab" id="lcr-1" data-step="rows" data-fx="type">2020 to 2022</p>
+        <ol class="curve" aria-labelledby="lcr-1">
+        <li class="ent" data-group>
+          <p class="yr" data-step="entries" data-fx="rail">2020</p>
+          <img class="lc-img" data-step="thumbs" data-fx="wipe" src="assets/img/lc-kellotsoi.webp" width="800" height="400" loading="lazy" decoding="async" alt="Screenshot of the Kellot soi, vai soiko? school front page: a dark menu bar, a bell logo and a photo of an old book and a bell with butterflies.">
+          <div class="lc-body" data-step="entries" data-fx="up"><h3 lang="fi">Kellot soi, vai soiko?</h3>
+            <p>Static HTML and CSS layout exercise: a fictional school's front page with a hover dropdown menu, flexbox sections and one responsive breakpoint. No JavaScript.</p>
+            <p class="lk"><a href="https://iloverpgs.github.io/index_tiedostot/Harjoitus7.html">Live page</a></p></div>
+        </li>
+        <li class="ent" data-group>
+          <p class="yr" data-step="entries" data-fx="rail">2021</p>
+          <img class="lc-img" data-step="thumbs" data-fx="wipe" src="assets/img/lc-paivakirja.webp" width="800" height="400" loading="lazy" decoding="async" alt="Screenshot of the Päiväkirja front page: an orange header and a stock photo of a woman stretching, with the text Liikutaan yhdessä.">
+          <div class="lc-body" data-step="entries" data-fx="up"><h3 lang="fi">Päiväkirja</h3>
+            <p>Workout diary in PHP and MySQL with a hand-rolled MVC: registration, login, add, edit and delete entries. Source only, it needs a database.</p>
+            <p>What I would do now: prepared statements, output escaping, ownership checks and CSRF protection.</p>
+            <p class="lk"><a href="https://github.com/ILoveRPGS/iloverpgs.github.io/tree/master/P%C3%A4iv%C3%A4kirjaty%C3%B6">Source</a></p></div>
+        </li>
+        <li class="ent" data-group>
+          <p class="yr" data-step="entries" data-fx="rail">2021</p>
+          <div class="tile tile-news" aria-hidden="true" data-step="thumbs" data-fx="wipe">
+            <span class="tile-bar"></span>
+            <span class="tile-row"><i></i><b></b></span><span class="tile-row"><i></i><b></b></span><span class="tile-row"><i></i><b></b></span>
+            <span class="tile-chip">Log in</span>
+          </div>
+          <div class="lc-body" data-step="entries" data-fx="up"><h3 lang="fi">Lantapahtuma / TreduLan</h3>
+            <p>PHP MVC exercise: register, log in, add, edit and delete news posts. Source only, it needs a database.</p>
+            <p class="lk"><a href="https://github.com/ILoveRPGS/iloverpgs.github.io/tree/master/MVC-harjoitus">Source</a></p></div>
+        </li>
+        <li class="ent" data-group>
+          <p class="yr" data-step="entries" data-fx="rail">2022</p>
+          <img class="lc-img" data-step="thumbs" data-fx="wipe" src="assets/img/lc-fanikauppa.webp" width="800" height="400" loading="lazy" decoding="async" alt="Screenshot of the Fanikauppa shop prototype: four product cards for a cup, a plate, cutlery and a bowl, with a cart section below.">
+          <div class="lc-body" data-step="entries" data-fx="up"><h3 lang="fi">Fanikauppa</h3>
+            <p>React 17 shop prototype, front end only: four hard-coded products, a cart, a checkout form and an on-page receipt. Nothing is sent anywhere.</p>
+            <p class="lk"><a href="https://iloverpgs.github.io/fanikauppa/">Live page</a></p></div>
+        </li>
+        <li class="ent" data-group>
+          <p class="yr" data-step="entries" data-fx="rail">2022</p>
+          <img class="lc-img" data-step="thumbs" data-fx="wipe" src="assets/img/lc-cardgame.webp" width="800" height="400" loading="lazy" decoding="async" alt="Screenshot of Card Game Adventure: a green enemy on a grassy hillside and three cards, one attack and two defend.">
+          <div class="lc-body" data-step="entries" data-fx="up"><h3>Card Game Adventure</h3>
+            <p>Unity card battle game built in a school course: draw cards, spend actions on attack and defend cards to beat enemies. Playable in the browser.</p>
+            <p class="lk"><a href="https://play.unity.com/mg/other/korttipeli" rel="noopener">Play on Unity Play</a></p></div>
+        </li>
+        </ol>
+      </div>
+      <div class="lc-row" data-group>
+        <p class="row-lab" id="lcr-2" data-step="rows" data-fx="type">2025 to 2026</p>
+        <ol class="curve" aria-labelledby="lcr-2">
+        <li class="ent" data-group>
+          <p class="yr" data-step="entries" data-fx="rail">2025</p>
+          <div class="tile tile-sys" aria-hidden="true" data-step="thumbs" data-fx="wipe">
+            <span class="sys-lane"><i></i><b style="flex:.32"></b></span><span class="sys-lane"><i></i><b style="flex:.44"></b></span><span class="sys-lane"><i></i><b style="flex:.62"></b></span><span class="sys-lane"><i></i><b style="flex:.84;background:var(--line-hi)"></b></span>
+            <span class="tile-chip">$ _</span>
+          </div>
+          <div class="lc-body" data-step="entries" data-fx="up"><h3>Linux and C/C++ exercises</h3>
+            <p>Exercise rounds in C and C++ on Linux: fork and exec, a small shell, and pthreads filling a 100-million-element array with 4 and 10 threads.</p>
+            <p class="priv">No public link</p></div>
+        </li>
+        <li class="ent" data-group>
+          <p class="yr" data-step="entries" data-fx="rail">2026</p>
+          <div class="tile tile-stack" aria-hidden="true" data-step="thumbs" data-fx="wipe">
+            <span class="stk"><em>web</em><b style="flex:.45"></b></span><span class="stk"><em>api</em><b style="flex:.7"></b></span><span class="stk"><em>db</em><b style="flex:.45"></b></span>
+          </div>
+          <div class="lc-body" data-step="entries" data-fx="up"><h3>TAMK web and API courses</h3>
+            <p>Two Next.js and TypeScript apps using Prisma and two Express REST APIs, all on PostgreSQL, with Docker and GitLab CI.</p>
+            <p class="priv">Private repositories</p></div>
+        </li>
+        <li class="ent" data-group>
+          <p class="yr" data-step="entries" data-fx="rail">2026</p>
+          <div class="tile tile-weeks" aria-hidden="true" data-step="thumbs" data-fx="wipe">
+            <span class="wk-row"><b style="--a:1;--n:4"></b></span><span class="wk-row"><b style="--a:3;--n:5"></b></span><span class="wk-row"><b style="--a:6;--n:5"></b></span>
+          </div>
+          <div class="lc-body" data-step="entries" data-fx="up"><h3>Jira app for a customer</h3>
+            <p>School project for a customer: a Jira Cloud app that exports Roadmap epics to an Excel weekly timeline. Built with a collaborator. Automated tests included.</p>
+            <p class="priv">Private repository</p></div>
+        </li>
+        <li class="ent ent-end" data-group>
+          <p class="yr" data-step="entries" data-fx="rail">2026</p>
+          <div class="tile tile-end" aria-hidden="true" data-step="thumbs" data-fx="wipe"><img src="assets/img/trinket-96.webp" alt="" width="96" height="96" loading="lazy" decoding="async"></div>
+          <div class="lc-body" data-step="entries" data-fx="up"><h3>TrinketBot</h3>
+            <p>Where the curve leads: a live product with automated tests and CI.</p>
+            <p class="lk"><a href="#trinketbot" data-go="trinketbot">See the project</a></p></div>
+        </li>
+        </ol>
+      </div>
+      </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ======================= SHELL: footer line ======================= -->
+<footer class="foot" id="foot">
+  <p class="foot-mail"><a class="mail" id="foot-mail" href="#path">mitja.savijarvi [at] gmail.com</a><button class="foot-copy" id="foot-copy" type="button" hidden>Copy</button><span class="foot-note-live" id="foot-note" role="status"></span></p>
+  <p class="keys" id="keys"><kbd>Left</kbd> <kbd>Right</kbd> or <kbd>1</kbd> to <kbd>8</kbd> run a command</p>
+  <div class="foot-r">
+  <p class="anim" id="anim-box" hidden><button class="anim-sw" id="anim" type="button" role="switch" aria-checked="true"><span class="sw-ui" aria-hidden="true"><i></i></span><span>animations:</span> <span class="anim-v" id="anim-v" aria-hidden="true">on</span></button></p>
+  <details class="about" id="about" open>
+    <summary>About<span class="long">this site</span></summary>
+    <div class="about-body">
+      <!-- BUSINESS ID: this is the only place it appears. Delete this one paragraph to remove it. -->
+      <p class="foot-biz">Claylake Interactive, business ID (Y-tunnus) 3659997-5.</p>
+      <p>Source for TrinketBot is private; code walkthrough on request.</p>
+      <p>Last updated 14 October 2026.</p>
+      <p>The Trinket logo, shown only where TrinketBot appears (its own slide and its entry in the learning curve), is mascot art by <a href="https://twitch.tv/malliesprout" rel="noopener">MallieSprout</a>, not licensed for reuse. Typefaces Instrument Serif, Figtree and JetBrains Mono under the SIL Open Font License. Motion by GSAP. Full texts in <a href="licenses.txt">licenses</a>.</p>
+    </div>
+  </details>
+  </div>
+</footer>
+
+<script src="assets/vendor/gsap.min.js" defer></script>
+<script src="assets/js/main.js" defer></script>
 </body>
 </html>

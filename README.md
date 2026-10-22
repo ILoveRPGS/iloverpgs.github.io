@@ -12,6 +12,7 @@ New site:
 - `assets/css/`: `fonts.css` and `site.css` (design tokens are CSS custom properties at the top of `site.css`; it has a table of contents).
 - `assets/js/main.js`: the slideshow engine: the pace table, the opening, the console and boot log, history and deep links, keyboard, the mobile menu, the animation switch and the contact address. It uses GSAP core only.
 - `assets/img/`, `assets/fonts/`, `assets/vendor/`: images, self-hosted fonts and the vendored GSAP. Nothing is loaded from a CDN. The icons (`favicon.svg`, `favicon-32.png`, `apple-touch-icon.png`) and the share image `og.jpg` are drawn from the slash-and-cursor mark, see "The mark and where the Trinket appears" below.
+- `cv/`: the curriculum vitae as its own page (`cv/index.html`, `cv/cv.css`) and a PDF made from it (`cv/Mitja-Savijarvi-CV.pdf`). See "The CV" below.
 - `404.html`, `Harjoitus7.html` (a redirect stub for an old public URL), `.nojekyll` and `licenses.txt`.
 
 Legacy school work, kept in place on purpose so that old links keep working:
@@ -72,7 +73,17 @@ The Trinket logo is used on the TrinketBot slides only, wherever TrinketBot appe
 - The log lines for this slide (`SCRIPT['learning-curve']` in `main.js`) are `run /learning-curve`, `load row {i}/2`, `write entry {i}/9`, `load thumbnail {i}/9` and `ready`. The two rows are revealed first, then the entries and the thumbnails run through row one and on through row two in document order. The year of an entry (`data-fx="rail"`) carries its diamond and the rail to the next one, so they are written in with it.
 - To add an entry, copy a `li.ent` into the right row, keep `data-group`, and change the counts in the `SCRIPT` line (`{i}/9`) and the `count`. Row one is sized for five entries and row two for four: check the fit at 1280x720 after adding a fifth to a row.
 
-The `/skills` slide also names the 2026 course projects: the group "Backed by TrinketBot and the 2026 course projects" holds Prisma and CI/CD with GitHub Actions and GitLab CI next to the TrinketBot tags, and C++ and Java are in "Also worked with", marked "course level" in the tag text.
+The `/skills` slide also names the 2026 course projects: the group "Backed by TrinketBot and the 2026 course projects" holds Prisma and CI/CD with GitHub Actions and GitLab CI next to the TrinketBot tags. "Also worked with" holds C#, C++, Python, Lua, Unity, Blender, MySQL, PhpMyAdmin, MongoDB, Heroku, Microsoft Azure, Visual Studio and Visual Studio Code, and Java, which is the one marked "course level". The same lists are on the CV in `cv/index.html`, so change both together.
+
+The `/path` slide lists five rows, newest first: Claylake Interactive, TAMK, the Corpenet Oy internship (Feb to Mar 2023), Tredu and MKM Konekeskus (Oct to Dec 2021). The rows are compact so that all five fit one screen at 1280x720; add a sixth only if you shorten something else.
+
+## The CV
+
+`https://iloverpgs.github.io/cv/` is a one-page curriculum vitae that can be linked on its own. It is plain HTML and CSS (no JavaScript except the small script that builds the email address), uses the same fonts and colours as the portfolio, and is dark on screen. A print stylesheet in `cv/cv.css` turns it into black text on white and fits it on one A4 page, so the browser's Print or Save as PDF gives a clean file. The portfolio links to it from the contact card on `/path` and from the About panel.
+
+To change the CV, edit `cv/index.html` (all text is in the file) and update the "Updated" line at the bottom. Other work experience goes in as another `<article class="entry">` in the experience section, newest first; there is a comment marking the spot. The business ID is one paragraph with a comment; delete the paragraph to remove it.
+
+To make the PDF again after a change, serve the site (`python3 -m http.server 8000`), open `http://127.0.0.1:8000/cv/` in Chrome, choose Print, set the destination to Save as PDF, paper size A4, margins Default, and leave Background graphics off. Save it as `cv/Mitja-Savijarvi-CV.pdf`. The result must be one page: if it spills over, shorten a line or two. The PDF contains the email address as plain text because it is a file; the web page builds the address with JavaScript so it is not in the markup.
 
 ## Changing content
 

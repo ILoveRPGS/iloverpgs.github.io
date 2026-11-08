@@ -8,7 +8,7 @@ There is no build step, no bundler and no framework. The site is plain HTML, CSS
 
 New site:
 
-- `index.html`: the whole portfolio as eight slides in this order (`#hello`, `#path`, `#skills`, `#trinketbot`, `#architecture`, `#numbers`, `#how-i-work`, `#learning-curve`), all text plain HTML, plus the shell (top bar, command console, footer line).
+- `index.html`: the whole portfolio as nine slides in this order (`#hello`, `#path`, `#skills`, `#trinketbot`, `#architecture`, `#numbers`, `#how-i-work`, `#gamepanel`, `#learning-curve`), all text plain HTML, plus the shell (top bar, command console, footer line).
 - `assets/css/`: `fonts.css` and `site.css` (design tokens are CSS custom properties at the top of `site.css`; it has a table of contents).
 - `assets/js/main.js`: the slideshow engine: the pace table, the opening, the console and boot log, history and deep links, keyboard, the mobile menu, the animation switch and the contact address. It uses GSAP core only.
 - `assets/img/`, `assets/fonts/`, `assets/vendor/`: images, self-hosted fonts and the vendored GSAP. Nothing is loaded from a CDN. The icons (`favicon.svg`, `favicon-32.png`, `apple-touch-icon.png`) and the share image `og.jpg` are drawn from the slash-and-cursor mark, see "The mark and where the Trinket appears" below.
@@ -33,7 +33,7 @@ Then open http://127.0.0.1:8000/. Any static file server works.
 
 ## The slideshow
 
-The site is one full-height page with eight slides, in this order: 1 `/hello`, 2 `/path`, 3 `/skills`, 4 `/trinketbot`, 5 `/architecture`, 6 `/numbers`, 7 `/how-i-work`, 8 `/learning-curve`. Choosing a command in the top bar, pressing Left, Right or 1 to 8, or following a link that runs a command plays one transition: the command is typed into the console, a short boot log prints with a progress bar, and the new slide is written into the layout. The address bar gets the slide id as the hash (`/#trinketbot`), so Back, Forward and deep links work. The mouse wheel and touch swipe never change slides. A key press, click or tap during a transition finishes it at once.
+The site is one full-height page with nine slides, in this order: 1 `/hello`, 2 `/path`, 3 `/skills`, 4 `/trinketbot`, 5 `/architecture`, 6 `/numbers`, 7 `/how-i-work`, 8 `/gamepanel`, 9 `/learning-curve`. Choosing a command in the top bar, pressing Left, Right or 1 to 9, or following a link that runs a command plays one transition: the command is typed into the console, a short boot log prints with a progress bar, and the new slide is written into the layout. The address bar gets the slide id as the hash (`/#trinketbot`), so Back, Forward and deep links work. The mouse wheel and touch swipe never change slides. A key press, click or tap during a transition finishes it at once.
 
 Three kinds of run, each with its own pace:
 
@@ -77,6 +77,14 @@ The `/skills` slide also names the 2026 course projects: the group "Backed by Tr
 
 The `/path` slide lists five rows, newest first: Claylake Interactive, TAMK, the Corpenet Oy internship (Feb to Mar 2023), Tredu and MKM Konekeskus (Oct to Dec 2021). The rows are compact so that all five fit one screen at 1280x720; add a sixth only if you shorten something else.
 
+## The gamepanel slide
+
+`/gamepanel` shows the owner's own project, a web control panel for game servers on one machine. It is a personal project, not a Claylake product, and the slide says so by calling it "my own project". The source repository is private, so the slide has no link; it states the status plainly ("Running on my own server, still in development") and offers a code walkthrough on request.
+
+The slide reuses the diagram panel from `/architecture` (`figure.panel.diagram-panel` with a wide `svg.diagram.h` from 1000 px and a stacked `svg.diagram.v` below that), with four boxes: Browser, Panel, Host agent and Game servers. Below it a two-column row holds the short copy on the left and a `dl` of facts (status, games, size) with the stack tags on the right. The log lines are `run /gamepanel`, `load layout`, `draw diagram {i}/4`, `write notes`, `write copy`, `write facts` and `ready`.
+
+The numbers in the `size` row (about 23,000 lines of TypeScript, about 5,000 lines of tests, 21 written design decisions) were counted on 7 November 2026 and the row says "as of" with that date. Re-count them before changing the date; do not round them up. The slide fits one screen at 1280x720 up to 1920x1080 on desktop; between 1000 and 1199 px wide it may scroll a few pixels inside itself, and on tablets and phones, where the diagram is stacked, it scrolls inside itself like the other slides.
+
 ## The CV
 
 `https://iloverpgs.github.io/cv/` is a one-page curriculum vitae that can be linked on its own. It is plain HTML and CSS (no JavaScript except the small script that builds the email address), uses the same fonts and colours as the portfolio, and is dark on screen. A print stylesheet in `cv/cv.css` turns it into black text on white and fits it on one A4 page, so the browser's Print or Save as PDF gives a clean file. The portfolio links to it from the contact card on `/path` and from the About panel.
@@ -95,7 +103,7 @@ Each part of a slide that is written in during the transition carries two attrib
 
 1. In `index.html`, add a `<section class="slide" id="my-slide" data-cmd="/my-slide" aria-labelledby="h-my-slide">` inside `<main>`, with `<div class="slide-in"><h2 class="cmd" id="h-my-slide" tabindex="-1" data-step="title" data-fx="cmd">/my-slide</h2><div class="slide-body">...</div></div>`. Put `data-step` and `data-fx` on the parts that should be written in.
 2. Add a link to the nav list: `<li><a href="#my-slide" data-go="my-slide"><span class="cn">/my-slide</span><span class="cd">Short description</span></a></li>`.
-3. In `assets/js/main.js`, add the id to `IDS` (the order is the nav order and the key numbers) and add a `SCRIPT` entry (last line `ready`, and its `{i}/n` counter lines need a `count`). Put the `<section>` at the same place in `index.html` as in `IDS`, because the stacked no-JS and print layout follows the document order. Do the same for the id list in the inline script in the `<head>` of `index.html`, and update the visible "/8" counter, the "1 to 8" key hint and the console placeholder in the markup.
+3. In `assets/js/main.js`, add the id to `IDS` (the order is the nav order and the key numbers) and add a `SCRIPT` entry (last line `ready`, and its `{i}/n` counter lines need a `count`). Put the `<section>` at the same place in `index.html` as in `IDS`, because the stacked no-JS and print layout follows the document order. Do the same for the id list in the inline script in the `<head>` of `index.html`, and update the visible "/9" counter, the "1 to 9" key hint and the console placeholder in the markup.
 4. A slide must fit one screen at 1440x900 and 1280x720; on phones it scrolls inside itself. Check it with the QA tools, if you have them, or by eye.
 
 ## The PHP projects

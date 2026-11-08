@@ -12,8 +12,8 @@
   const root = document.documentElement;
   const $ = (s, c = document) => c.querySelector(s);
   const $$ = (s, c = document) => [...c.querySelectorAll(s)];
-  /* The order of the slides: nav, keys 1 to 8, Left and Right, the counter and the stacked no-JS page all follow this list and the order of the <section>s. */
-  const IDS = ['hello', 'path', 'skills', 'trinketbot', 'architecture', 'numbers', 'how-i-work', 'learning-curve'];
+  /* The order of the slides: nav, keys 1 to 9, Left and Right, the counter and the stacked no-JS page all follow this list and the order of the <section>s. */
+  const IDS = ['hello', 'path', 'skills', 'trinketbot', 'architecture', 'numbers', 'how-i-work', 'gamepanel', 'learning-curve'];
   const SLIDE = Object.fromEntries(IDS.map(id => [id, document.getElementById(id)]));
   window.__ok = true;                                    /* tells the inline failsafe that this script is alive */
 
@@ -48,6 +48,7 @@
     'architecture':   [L('run /architecture', 'title'), L('load layout', 'layout'), L('draw diagram {i}/6', 'diagram', 6), L('write notes', 'notes'), L('ready')],
     'numbers':        [L('run /numbers', 'title'), L('load layout', 'layout'), L('fill bars', 'bars'), L('write figures', 'figures'), L('ready')],
     'how-i-work':     [L('run /how-i-work', 'title'), L('load decisions', 'decisions'), L('load checks', 'checks'), L('write process', 'process'), L('ready')],
+    'gamepanel':      [L('run /gamepanel', 'title'), L('load layout', 'layout'), L('draw diagram {i}/4', 'diagram', 4), L('write notes', 'notes'), L('write copy', 'copy'), L('write facts', 'facts'), L('ready')],
     'learning-curve': [L('run /learning-curve', 'title'), L('load row {i}/2', 'rows', 2), L('write entry {i}/9', 'entries', 9), L('load thumbnail {i}/9', 'thumbs', 9), L('ready')],   /* two rows (row labels), nine entries; the entries and thumbnails run through row one and then row two */
   };
   /* The opening prints these first. Real parts of this page only: no network, sizes, timings or versions. */

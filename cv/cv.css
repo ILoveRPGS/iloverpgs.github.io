@@ -125,11 +125,11 @@ section + section { margin-top: 30px; }
   .dot { background: #0b3a6e; box-shadow: none; }
   .cols { grid-template-columns: 48mm minmax(0, 1fr); gap: 6mm 9mm; margin-top: 5mm; }
   .side { order: -1; }
-  section + section { margin-top: 3.8mm; }
+  section + section { margin-top: 3.4mm; }
   .sec { margin-bottom: 1.8mm; font-size: 8pt; color: #0b3a6e; }
   .sec span { color: #666; }
   .profile { font-size: 9.2pt; color: #111; }
-  .entry + .entry { margin-top: 2.2mm; }
+  .entry + .entry { margin-top: 2mm; }
   .entry { break-inside: avoid; }
   .entry h3 { font-size: 9.6pt; color: #111; }
   .when { font-size: 7.8pt; color: #0b3a6e; }

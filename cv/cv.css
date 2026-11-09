@@ -110,7 +110,7 @@ section + section { margin-top: 30px; }
 @media print {
   :root { color-scheme: light; }
   html, body { background: #fff !important; color: #111; }
-  body { font-size: 9.2pt; line-height: 1.35; }
+  body { font-size: 9.2pt; line-height: 1.32; }
   * { animation: none !important; }
   .bg, .tools { display: none !important; }
   .sheet { width: auto; margin: 0; padding: 0; border: 0; border-radius: 0; background: none; }
@@ -128,7 +128,7 @@ section + section { margin-top: 30px; }
   section + section { margin-top: 3.4mm; }
   .sec { margin-bottom: 1.8mm; font-size: 8pt; color: #0b3a6e; }
   .sec span { color: #666; }
-  .profile { font-size: 9.2pt; color: #111; }
+  .profile { max-width: none; font-size: 9.2pt; color: #111; }
   .entry + .entry { margin-top: 2mm; }
   .entry { break-inside: avoid; }
   .entry h3 { font-size: 9.6pt; color: #111; }
